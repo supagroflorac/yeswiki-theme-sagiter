@@ -63,7 +63,6 @@ header .headerpage h2 {
 	color:#666; text-align:center;
 }
 
-
 /* Menu déroulant du haut pour la navigation (PageMenuHaut) */
 #topnav { 
 	display:block;
@@ -257,6 +256,10 @@ footer .footerpage {
     min-height: 800px;
 }
 
+/* Corrige le bug de profondeur du menu sur Chom{e,ium}*/
+div.sidebar {
+    z-index: 999;
+}
 
 .sidebar .form-search .input-append .search-query {
     border-radius: 0 0 0 0px;
