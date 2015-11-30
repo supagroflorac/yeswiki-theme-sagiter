@@ -1,0 +1,565 @@
+body {
+	background:#E1E1E1;
+}
+
+a {
+	color: #0074cc;
+}
+a:hover {
+	color: #0055cc;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+/* Conteneur de la page Wiki */
+#container {
+	margin-top:0px;
+	margin-bottom:0px;
+	background: #FFF;
+	zoom: 1;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	/*
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);*/	
+}
+
+
+/* Liens d'accès rapide tout en haut (PageRapideHaut) */
+header .topbarpage {
+	font-size:0.85em; 
+	padding:10px; 
+	float:left;
+}
+
+header .topbarpage a {
+	color:#333; 
+	text-decoration:none; 
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+header .topbarpage a:hover {
+	text-decoration:underline;
+}
+
+
+/* En-tete (PageHeader) */
+header .headerpage {
+	margin: 0;
+	padding: 20px;
+}
+
+header .headerpage h1 { 
+	color:#333; text-align:center;
+}
+
+header .headerpage h2 {
+	color:#666; text-align:center;
+}
+
+
+/* Menu déroulant du haut pour la navigation (PageMenuHaut) */
+#topnav { 
+	display:block;
+	position:relative;
+	font-size:1.1em;
+	margin:0;
+	padding:0;
+	width:100%;
+	z-index:100;
+}
+
+#topnav, .footer, .vertical-dropdown-menu a:hover, .vertical-dropdown-menu a.active-link {
+	color: #ffffff;
+	background-color: #8bba2f;
+}
+
+.vertical-dropdown-menu a {
+    border-radius: 0px;
+}
+
+#topnav li:hover, #topnav li.active-list, .footer a:hover {
+	background-color: #0055cc;
+}
+
+#topnav ul { 
+	padding:0; margin:0; 
+}
+
+#topnav ul:after { 
+	content:"."; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	visibility:hidden; }
+
+#topnav li {
+	position:relative; 
+	float:left; 
+	list-style-type:none; 
+	padding:8px 20px;
+	margin:0;
+	color:#333;
+	display:block;
+	*zoom: 1; 
+}
+
+#topnav li a, #topnav li a:visited{
+	padding:8px 20px;
+	margin:-8px -20px;
+	text-decoration:none;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1; 
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#topnav > div > ul > li {
+	 border-left:1px solid rgba(200, 200, 200, 0.2);
+	 border-right:1px solid rgba(100, 100, 100, 0.2); 
+}
+
+#topnav > div > ul > li:first-child {
+	border-left:none; 
+}
+
+#topnav > div > ul > li:last-child {
+	border-right:none; 
+}
+
+#topnav ul ul { 
+	display:none; 
+	width:230px; 
+	position:absolute; 
+	top:34px; 
+	left:0; 
+	background-color: #0088cc;
+	background: rgba(0, 136, 204, 0.9);
+	padding:0; margin:0; z-index:99;border:none;
+	-moz-border-radius-bottomleft:4px;
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	z-index:101;
+	zoom: 1;
+}
+
+#topnav ul ul li { 
+	float:none; 
+	border:none;
+	border-left:1px solid rgba(0,0,0,0.1); 
+	border-right:1px solid rgba(0,0,0,0.1);
+}
+#topnav ul ul a { 
+	padding:5px 10px;
+	border:none;
+	float:none;
+	display:block;
+	font-size:14px; 
+}
+#topnav ul ul ul {
+	display:none;
+	width:200px;
+	position:absolute;
+	left:229px;
+	top:0;
+	padding:0; margin:0; 
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;
+	border-top-right-radius:4px;
+}
+
+#topnav ul ul ul ul {
+	left:199px;
+}
+
+#topnav ul ul li.last {
+	 border-left:1px solid rgba(0,0,0,0.1);
+	 border-bottom:1px solid rgba(0,0,0,0.1);
+	 -moz-border-radius-bottomleft:4px;
+	 -moz-border-radius-bottomright:4px;
+	 -webkit-border-bottom-left-radius:4px;
+	 -webkit-border-bottom-right-radius:4px;
+	 border-bottom-left-radius:4px;
+	 border-bottom-right-radius:4px;
+}
+
+#topnav .search-form {margin: 6px;}
+#topnav .search_input {width: 100px;}
+
+
+/* Partie centrale de la page Wiki */
+#main {
+	position:relative;
+	min-height:400px;
+}
+
+
+/* Barre de rédaction */
+.footer [class^="icon-"],
+.footer [class*=" icon-"] {
+	  background-image: url("../images/glyphicons-halflings-white.png");
+}
+.footer {
+	font-size:0.9em;
+	margin: 0;
+	padding: 0;
+	text-align:center;
+}
+
+.footer a { 
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	padding: 5px 8px;
+	text-decoration:none; 
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 0;
+}
+
+.footer a:hover {
+	text-decoration:none;
+}
+
+
+/* Pied de page */
+footer {
+	font-size:0.9em;
+}
+footer .footerpage {
+	margin: 0;
+	padding: 20px;
+}
+
+
+.menupage, .logo {
+	background-color: #8bba2f;
+
+	-moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.page, .menupage, .rightcolumnpage {
+    min-height: 800px;
+}
+
+
+.sidebar .form-search .input-append .search-query {
+    border-radius: 0 0 0 0px;
+    height: 28px;
+    width: 60px;
+}
+
+.sidebar input.search-query {
+  	padding-left: 90px;
+}
+
+.sidebar .sagisearch  {
+    width: 40px;
+    height: 36px;
+    background-image: url("../images/recherche.png");
+    background-repeat: no-repeat;
+
+}
+
+.sidebar button  {
+ 
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+
+.content {
+	margin-left: 250px;
+}
+
+/* Vertical Menu */
+/* http://www.menucool.com/vertical/v2/menuV2.css */
+
+#menuV2 li, #menuV2 a {zoom:1;} /* Hacks for IE6, IE7 */
+#menuV2, #menuV2 ul
+{
+    position: relative;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display:block;
+    z-index:999;
+}
+                
+/* Top level menu links style
+---------------------------------------*/
+
+#menuV2 li
+{
+    list-style: none; 
+    margin: 0; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7eaa2a;
+}
+#menuV2 li a
+{
+   font-size: 20px;
+   font-family: "Open Sans";
+   color: rgb(255, 255, 255);
+   text-align: right;
+    /*overflow: auto; force hasLayout in IE7 */
+    text-decoration: none;
+    line-height:26px;
+    padding-right:35px;            
+
+}
+#menuV2 ul li a
+{
+    line-height:30px;
+}
+                
+#menuV2 li a.arrow:hover
+{
+    background-image:url('../images/arrow.gif');
+    background-repeat: no-repeat;
+    background-position: 101% 50%;
+}
+        
+/*Sub level menu items
+---------------------------------------*/
+#menuV2 li ul 
+{
+    position: absolute;
+    width: 250px; /*Sub Menu Items width */
+    visibility:hidden;
+    text-align: left;
+
+}
+
+#menuV2 li ul li a, #menuV2 li ul li a:hover
+{
+    font-size: 16px;
+    font-family: "Open Sans";
+  	color: #e6e6e6;
+  	line-height: 1.2;
+  	margin-left: 20px;
+    
+}
+
+        
+#menuV2 a.arrow
+{
+    background-image:url('../images/arrow.gif');
+    background-repeat: no-repeat;
+    background-position: 101% 50%;
+}
+#menuV2 li:hover, #menuV2 li.onhover
+{
+    background-position:0 -62px;
+}
+#menuV2 ul li
+{
+    background: #316844;
+    background-image:none;
+    border-bottom: 1px solid #578164;
+
+}
+#menuV2 ul li:hover, #menuV2 ul li.onhover
+{
+
+  	 background: #316844;
+     background-image:none;
+     border-bottom: 1px solid #578164;
+}
+        
+/* Holly Hack for IE \
+* html #menuV2  li
+{
+    float:left;
+    height: 1%;
+}
+* html #menuV2  li a
+{
+    height: 1%;
+}*/
+/* End */
+
+/* Calendrier
+*/
+
+
+
+
+
+/* Fin Calendrier */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+
+h1 {
+  font-size: 40px;
+  font-family: "Open Sans";
+  color: #8bba2f;
+
+}
+
+
+h2 {
+  font-size: 35px;
+  font-family: "Open Sans";
+  color: #659a26;
+
+}
+
+h3 {
+  font-size: 30px;
+  font-family: "Open Sans";
+   color: #1986c2;
+
+}
+
+h4 {
+  font-size: 25px;
+  font-family: "Open Sans";
+   color: #acafb6;
+}
+
+h5 {
+  font-size: 22px;
+  font-family: "Open Sans";
+  color: #e8700f;
+}
+
+h6 {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: #e8700f;      
+}
+
+a {
+  color: rgb(117, 159, 179);
+}
+
+a:hover {
+    color: #0D87C2;
+    text-decoration: none;
+}
+
+
+
+.p {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: rgb(119, 119, 119);
+  line-height: 1.4;
+  text-align: left;
+}
+
+.menupage {
+  font-size: 25px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  text-align: right;
+}
+
+.sous-menu {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: rgb(229, 229, 229);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.titre_brevres_col {
+  font-size: 25px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+}
+
+.txt_breves {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.txt_rechercher {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(130, 130, 130);
+  text-align: left;
+}
+
+
+/* Bazar */
+
+ .BAZ_fiche_titre {
+
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: rgb(117, 159, 179);
+  line-height: 20px;
+ }
+    
+
+.yeswiki_frame {
+	 background-color: #8bba2f;
+}
+.yeswiki-page-widget {
+	 background-color: #8bba2f;
+
+}
+
+
+#calendar {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 10px;
+}
+.fc-header-title h2 {
+    font-size: .9em;
+    white-space: normal !important;
+}
+
+.fc-header-right {
+	width: 100% !important;
+}
+
+.fc-view-month .fc-event, .fc-view-agendaWeek .fc-event {
+    font-size: 0;
+    overflow: hidden;
+    height: 2px;
+}
+.fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+.fc-agenda-axis {
+    width: 20px !important;
+    font-size: .7em;
+}
+
+.fc-button-content {
+    padding: 0;
+}
+
+.fc-header-title h2 {
+    margin-top: -10px !important;
+    font-size: 2em;
+ }
