@@ -78,31 +78,56 @@ nav {
   background: #8bba2f;
 }
 
+nav div.include ul {
+  padding-right: 30px;
+}
+
 nav ul {
+  display: block;
   padding-left: 0;
   text-align: right;
 }
 
 nav li {
+  color: white;
   font-family: "Open Sans";
   font-size: 20px;
   line-height: 30px;
   list-style: none;
 }
 
-nav li li {
+nav li ul {
   background: #316844;
+  margin-right: -30px;
+}
+
+nav ul li {
+  cursor: pointer;
 }
 
 nav li a {
   color: white;
   display: block;
-  padding-right: 30px;
 }
 
 nav li a:hover {
   color: white;
-  text-decoration: underline;
+}
+
+/* Menu spécifique javascript */
+.hide {
+  display: none;
+}
+
+.dropdown:before {
+  content: '';
+  color: #316844;
+  position: absolute;
+  right: -25px;
+  top: 12px;
+  border-top: 10px solid #316844;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 /*******************************************************************************
