@@ -65,6 +65,11 @@ header {
   text-align: right;
 }
 
+article, footer {
+  padding: 0 30px;
+}
+
+
 /*******************************************************************************
  * Menu
  ******************************************************************************/
@@ -92,9 +97,38 @@ nav li li {
 nav li a {
   color: white;
   display: block;
+  padding-right: 30px;
 }
 
 nav li a:hover {
   color: white;
   text-decoration: underline;
+}
+
+/*******************************************************************************
+ * Écran large
+ ******************************************************************************/
+ @media all and (min-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    min-height: 100vh;
+  }
+
+  header, footer, article {
+    margin-left: 250px;
+    min-height: 10vh;
+  }
+
+  footer {
+    min-height: 20vh;
+  }
+
+  article {
+    max-width: 50em;
+    min-height: 70vh;
+  }
 }
