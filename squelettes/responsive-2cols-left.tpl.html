@@ -1,119 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{configuration param="lang"}}"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{configuration param="lang"}}"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{configuration param="lang"}}"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{{configuration param="lang"}}"> <!--<![endif]-->
+<!DOCTYPE html>
 <head>
-	<!-- HTML Metas -->
-	<meta charset="{{configuration param="charset"}}">
-	{{metarobots}}
-	<meta name="keywords" content="{{configuration param="meta_keywords"}}" />
-	<meta name="description" content="{{configuration param="meta_description"}}" />
-	<meta name="viewport" content="width=device-width" />
-
-	<!-- Title of the page -->
-	<title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
-	
-	<!-- Favicons -->
-	<link rel="shortcut icon" type="image/x-icon" href="{{configuration param="theme_path"}}images/favicon.ico" />
-	<link rel="apple-touch-icon" href="{{configuration param="theme_path"}}images/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" href="{{configuration param="theme_path"}}images/favicon.png" />
-
-  <!-- Fonts -->
-  <style type="text/css">
-
-  <!--
-    @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-
-  }
-  @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-Bold.ttf');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-Italic.ttf');
-    font-weight: normal;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-BoldItalic.ttf');
-    font-weight: bold;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-Light.ttf');
-    font-weight: lighter;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Open Sans';
-    src: url('themes/sagiter/fonts/OpenSans-LightItalic.ttf');
-    font-weight: lighter;
-    font-style: italic;
-  }
-
-
-   -->
-  </style>    
-
-	{{linkstyle othercss="bootstrap/bootstrap-responsive.min.css"}}
-	{{linkrss}}
+  <meta charset="{{configuration param="charset"}}">
+  <meta name="keywords" content="{{configuration param="meta_keywords"}}">
+  <meta name="description" content="{{configuration param="meta_description"}}">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
 </head>
 
 <body {{parambody}}>
-	<div id="container" class="container-fluid">
-		
-		<div id="main" role="main">
-			<div class="row-fluid">
-				<div class="span2 sidebar affix">
-					<div class="logo text-center">
-
-					<a href="."><img src="{{configuration param="theme_path"}}/images/logo_sagiter.png"></img></a>
-					<br></br>
-					{{moteurrecherche}}
-					</div>
-					
-					<div class="text-right">
-						{{include page="PageMenu" 	class="menupage" doubleclic="1" actif="1"}}
-					</div>
-					
-				</div>
-					
-					
-				<div class="pull-right">
-					<header>
-						
-					{{include page="PageRapideHaut" class="topbarpage" doubleclic="1"}}
-						<a href="/intranet"><img src="{{configuration param="theme_path"}}/images/intranet.png"></img></a>
-					</header>
-				
-				</div>
-				<div class="span10" {{doubleclic}}>
-					<div class="content">
-						{WIKINI_PAGE}
-						<footer>
-							{{include page="PageFooter" class="footerpage" doubleclic="1"}}
-						</footer><!-- end of footer -->	
-					</div>
-					
-				</div>
-				
-			</div><!-- end of .row-fluid -->
-		</div><!-- end of #main -->
-		
-	
-	</div> <!-- end of #container -->
-
+  <header>
+    {{include page="PageRapideHaut" doubleclic="1"}}
+  </header>
+  <article>
+    {WIKINI_PAGE}
+  </article>
+  <nav>
+    {{include page="PageMenu" doubleclic="0" actif="1"}}
+  </nav>
+  <footer>
+    {{include page="PageFooter" doubleclic="1"}}
+  </footer>
 	{{linkjavascript}}
 </body>
 </html>
