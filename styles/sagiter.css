@@ -76,6 +76,7 @@ article, footer {
 
 nav {
   background: #8bba2f;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
 }
 
 nav div.include ul {
