@@ -55,7 +55,6 @@ a:hover {
   font-family: "Open Sans";
   color: #777;
   line-height: 1.4;
-  text-align: left;
 }
 
 /*******************************************************************************
@@ -65,15 +64,13 @@ header {
   text-align: right;
 }
 
-article, footer {
+#main, footer {
   padding: 0 30px;
 }
-
 
 /*******************************************************************************
  * Menu
  ******************************************************************************/
-
 nav {
   background: #8bba2f;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
@@ -144,7 +141,7 @@ nav li a:hover {
     min-height: 100vh;
   }
 
-  header, footer, article {
+  header, footer, #main {
     margin-left: 250px;
     min-height: 10vh;
   }
@@ -153,8 +150,8 @@ nav li a:hover {
     min-height: 20vh;
   }
 
-  article {
-    max-width: 50em;
+  #main {
+    max-width: 53em;
     min-height: 70vh;
   }
 }
